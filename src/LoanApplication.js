@@ -1,11 +1,13 @@
 import { html, css, LitElement } from 'lit-element';
 
+import './dashboard/Dashboard.js';
+
 export class LoanApplication extends LitElement {
   static get styles() {
     return css`
       :host {
         display: block;
-        padding: 25px;
+        padding: 0px;
         color: var(--loan-application-text-color, #000);
       }
     `;
@@ -30,8 +32,9 @@ export class LoanApplication extends LitElement {
 
   render() {
     return html`
-      <h2>${this.title} Nr. ${this.counter}!</h2>
-      <button @click=${this.__increment}>increment</button>
+      <div>
+        <dash-board> </dash-board>
+      </div>
     `;
   }
 }
